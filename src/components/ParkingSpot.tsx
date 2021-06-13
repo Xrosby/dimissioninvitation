@@ -76,3 +76,4 @@ export default function ParkingSpot(Props: Props) {
 }
 
 // HJEM :55.39963145877151, 10.395390039185802
+//Comm
