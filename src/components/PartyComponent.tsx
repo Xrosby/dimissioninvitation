@@ -31,7 +31,7 @@ export default function PartyComponent() {
           }}
         >
           Så blev det endelig tid for os at dimitere!<b></b> I denne anledning
-          inviteres du hermed til vores dimissionsfest i haven på{" "}
+          inviteres du/I hermed til vores dimissionsfest i haven på{" "}
           <a
             style={{ color: "#6d893b", fontWeight: "bold" }}
             target="_blank"

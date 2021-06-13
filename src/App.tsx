@@ -48,8 +48,8 @@ function App() {
   };
 
   let partyCardColor = "#f5f3de";
-  let planCardColor = "#b9ccc1";
-  let covidCardColor = "#b9ccc1";
+  let planCardColor = "#F9F6EE";
+  let covidCardColor = "#F9F6EE";
   let parkingCardColor = "#f5f3de";
 
   const colOptions = "col-lg-6 col-xl-6 col-md-12 col-sm-12 dim-card";

@@ -19,8 +19,8 @@ export default function CovidInformation() {
     },
   ];
 
-  let sanitizerSpanColor = "#b9ccc1";
-  let vaccTestSpanColor = "#b9ccc1";
+  let sanitizerSpanColor = "#F9F6EE";
+  let vaccTestSpanColor = "#F9F6EE";
 
   return (
     <div
@@ -71,7 +71,7 @@ export default function CovidInformation() {
           <p>
             <a
               className="covid-text"
-              style={{ color: "white" }}
+              style={{ color: "black" }}
               href="https://www.sst.dk/da/Udgivelser/2020/Private-fejringer-og-arrangementer"
             >
               Sundhedsstyrelsens anbefalinger for fest og forsamlinger
