@@ -15,6 +15,9 @@
    .covid-text {
      color:black !important;
    }
+   #sanitizer-card {
+     padding:5% !important;
+   }
 }
 
 

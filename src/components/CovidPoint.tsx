@@ -8,7 +8,7 @@ interface Props {
 }
 export default function CovidPoint(Props: Props) {
   return (
-    <div className="covid-card" style={{backgroundColor:Props.color, paddingBottom:"2%"}}>
+    <div id="sanitizer-card" className="covid-card" style={{backgroundColor:Props.color, paddingBottom:"2%"}}>
       <img style={{ width: "100px" }} src={Props.src} />
       <div >{Props.message}</div>
     </div>
