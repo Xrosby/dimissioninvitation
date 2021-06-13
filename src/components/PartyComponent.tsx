@@ -14,7 +14,7 @@ export default function PartyComponent() {
         paddingTop: "2%",
       }}
     >
-      <h1>Mads og Lasses Dimission!</h1>
+      <h1 id="party-header">Mads og Lasses Dimission!</h1>
       <div
         style={{
           padding: "10px",
