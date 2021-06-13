@@ -10,7 +10,7 @@ export default function Plan() {
   ];
 
   return (
-    <div style={{ textAlign: "center", padding: "2%", paddingTop: "2%" , color:"white"}}>
+    <div style={{ textAlign: "center", padding: "2%", paddingTop: "2%" , }}>
       <h1>Plan</h1>
       <div
         style={{

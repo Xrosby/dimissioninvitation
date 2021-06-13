@@ -18,20 +18,35 @@ export default function CovidInformation() {
       message: "Vaccine",
     },
     {
-      src: "https://static.thenounproject.com/png/2038370-200.png",
+      src: "https://image.flaticon.com/icons/png/512/2484/2484926.png",
       message: "PCR eller Antigen Test",
     },
   ];
 
+  let sanitizerSpanColor = "#b9ccc1";
+  let vaccTestSpanColor = "#b9ccc1";
+
   return (
-    <div style={{ textAlign: "center", padding: "0px", paddingTop: "5%" }}>
+    <div
+      className="party-card"
+      style={{
+        textAlign: "center",
+        padding: "0px",
+        paddingTop: "2%",
+      }}
+    >
       <h1>Corona information</h1>
       <div>
-        <CovidPoint src={covidPoints[0].src} message={covidPoints[0].message} />
+        <CovidPoint
+          color={sanitizerSpanColor}
+          src={covidPoints[0].src}
+          message={covidPoints[0].message}
+        />
         <div
+          className="covid-card"
           style={{
-            backgroundColor: "#235c64",
-            color: "white",
+            backgroundColor: vaccTestSpanColor,
+            color: "black",
             paddingTop: "2%",
             paddingBottom: "2%",
           }}
@@ -66,7 +81,8 @@ export default function CovidInformation() {
           Og så vil vi gøre alle opmærksomme på{" "}
           <p>
             <a
-              style={{ color: "#235c64" }}
+              className="covid-text"
+              style={{ color: "white" }}
               href="https://www.sst.dk/da/Udgivelser/2020/Private-fejringer-og-arrangementer"
             >
               Sundhedsstyrelsens anbefalinger for fest og forsamlinger

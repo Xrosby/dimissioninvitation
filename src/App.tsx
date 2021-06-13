@@ -26,11 +26,10 @@ function App() {
     },
     {
       position: {
-        lat: 55.40197146648503 ,
-        lng: 10.392858034968008 ,
+        lat: 55.40197146648503,
+        lng: 10.392858034968008,
       },
     },
-   
   ];
 
   //55.40197146648503, 10.392858034968008
@@ -38,6 +37,11 @@ function App() {
   let onMarkerRightClick = function (marker: OMarker): void {
     console.log("CLick");
   };
+
+  let partyCardColor = "#f5f3de";
+  let planCardColor = "#b9ccc1";
+  let covidCardColor = "#b9ccc1";
+  let parkingCardColor = "#f5f3de";
 
   const colOptions = "col-lg-6 col-xl-6 col-md-12 col-sm-12";
   const minHeight = "472px";
@@ -47,9 +51,9 @@ function App() {
         <div
           style={{
             minHeight: minHeight,
-            backgroundColor: "#364F6B",
+            backgroundColor: partyCardColor,
             margin: "0px",
-            color: "white",
+            color: "black",
           }}
           className={colOptions}
         >
@@ -58,7 +62,7 @@ function App() {
         <div
           style={{
             minHeight: minHeight,
-            backgroundColor: "#2f7f8b",
+            backgroundColor: planCardColor,
             margin: "0px",
           }}
           className={colOptions}
@@ -71,23 +75,31 @@ function App() {
           style={{
             padding: "0px",
             minHeight: minHeight,
-            backgroundColor: "#3ba3b3",
+            backgroundColor: covidCardColor,
             margin: "0px",
+            color: "black",
           }}
-          className={colOptions}
+          className={colOptions + " covid-card"}
         >
           <CovidInformation />
         </div>
         <div
+          id="parking-card"
           style={{
             minHeight: minHeight,
             margin: "0px",
-            backgroundColor: "#F5F5F5",
+            backgroundColor: parkingCardColor,
             textAlign: "center",
           }}
           className={colOptions}
         >
-          <h1>Parkeringsmuligheder</h1>{" "}
+          <h1
+            style={{
+              marginTop: "2%",
+            }}
+          >
+            Parkeringsmuligheder
+          </h1>{" "}
           <ParkingSpot
             key="spot"
             onMarkerRightClick={onMarkerRightClick}
