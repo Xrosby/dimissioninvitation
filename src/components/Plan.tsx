@@ -30,8 +30,8 @@ export default function Plan() {
       <p
         style={{
           padding: "10px",
-          maxWidth: "80%",
-          textAlign: "start",
+          maxWidth: "100%",
+          textAlign: "center",
         }}
       >
         Siden vi ikke ved noget om hvor og hvornår online dimission kommer til
