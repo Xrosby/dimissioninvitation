@@ -1,24 +1,20 @@
 import React from "react";
 import { Component } from "react"; // literally anything, don't even have to use it
 import CovidPoint from "./CovidPoint";
+import vacc from "../resources/vacc.png";
+import test from "../resources/testing.png";
 
 export default function CovidInformation() {
   interface Point {
-    src: string;
     message: string;
   }
 
   const covidPoints: Array<Point> = [
     {
-      src: "https://cdn.pixabay.com/photo/2020/06/15/08/17/hand-sanitizer-5300802_960_720.png",
       message: " Der vil være rigeligt håndsprit tilgængeligt for alle",
     },
+    { message: "Vaccine" },
     {
-      src: "https://lh3.googleusercontent.com/proxy/JdJvmfej6rJxZQLLmOTl_pL7M3QS95UfYs0ZRY1MUfN_Eowt0X5sJnYVRuzh84yuPTBntKULcCGO1LOTTw25Zy9NU67WcKB44ozzF1-dPjzWt7ejAnELrYI7xO8zvchUpeTd",
-      message: "Vaccine",
-    },
-    {
-      src: "https://image.flaticon.com/icons/png/512/2484/2484926.png",
       message: "PCR eller Antigen Test",
     },
   ];
@@ -39,7 +35,6 @@ export default function CovidInformation() {
       <div>
         <CovidPoint
           color={sanitizerSpanColor}
-          src={covidPoints[0].src}
           message={covidPoints[0].message}
         />
         <div
@@ -55,19 +50,13 @@ export default function CovidInformation() {
           <div style={{ padding: "1px", margin: "0px", fontSize: "1rem" }}>
             <span style={{ fontWeight: "bold" }}>
               {" "}
-              <img
-                style={{ height: "2rem", marginRight: "10px" }}
-                src={covidPoints[1].src}
-              />
+              <img style={{ height: "2rem", marginRight: "10px" }} src={vacc} />
               Vaccine
             </span>{" "}
             <span>eller</span>{" "}
             <span style={{ fontWeight: "bold" }}>
               PCR/Antigen Test
-              <img
-                style={{ height: "2rem", marginLeft: "10px" }}
-                src={covidPoints[2].src}
-              />
+              <img style={{ height: "2.9rem", marginLeft: "10px" }} src={test} />
             </span>
           </div>
           <div></div>
