@@ -4,9 +4,8 @@
 
 @media only screen and (max-width: 320px) {
   #party-header {
-    font-size: 20px !important;
-  }
-
+    display:none
+ }
   #party-content {
     font-size: 0.8rem !important;
   }
@@ -17,8 +16,8 @@
 }
 @media only screen and (max-width: 375px) {
   #party-header {
-    font-size: 20px !important;
-  }
+    display:none
+ }
 
   #party-content {
     font-size: 0.8rem !important;
@@ -35,13 +34,7 @@
   }
 
   #party-header {
-    background-color: rgba(245, 243, 222, 0.95);
-    border-bottom: 1px solid green;
-    width: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    padding: 10px;
+     display:none
   }
 
   h4 {
