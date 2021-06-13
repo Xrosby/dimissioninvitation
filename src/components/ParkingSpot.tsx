@@ -2,6 +2,7 @@ import React from "react";
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 import { create } from "domain";
 
+
 interface OMarker {
   position: { lat: number; lng: number };
 }
@@ -24,7 +25,7 @@ export default function ParkingSpot(Props: Props) {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: "AIzaSyCwTiT-fWDJwQ7q-7Y3leDizGBbVjzsp84",
-    mapIds:["2bcc3a8ad9f310fd"]
+    mapIds: ["2bcc3a8ad9f310fd"],
   });
 
   const [map, setMap] = React.useState(null);
@@ -36,16 +37,24 @@ export default function ParkingSpot(Props: Props) {
         lat: 55.40161,
         lng: 10.395199,
       }}
-      options={{mapTypeControl: false}}
+      options={{ mapTypeControl: false }}
       zoom={15}
     >
+      <Marker
+        icon={{
+          url: "https://i.ibb.co/4thZrWQ/party-loc.png",
+          scaledSize: new google.maps.Size(46, 46),
+        }}
+        position={{ lat: 55.39963145877151, lng: 10.395390039185802 }}
+      />
+
       {Props.markers.map((marker) => (
         <Marker
           key={"marker-" + marker.position.lat}
           {...marker}
           icon={{
             url: "https://www.pngrepo.com/png/133735/180/parking-location.png",
-            scaledSize: new google.maps.Size(40,40),
+            scaledSize: new google.maps.Size(40, 40),
           }}
           onRightClick={() => Props.onMarkerRightClick(marker)}
         />
