@@ -8,13 +8,20 @@
   }
 
   #party-header {
-    background-color: rgba(255, 255, 255, .9);
+    background-color: rgba(255, 255, 255, 0.9);
     border-bottom: 1px solid green;
-    width:100%;
+    width: 100%;
     position: absolute;
-    top:0px;
-    left:0px;
-    padding:10px;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+  }
+
+  h4 {
+    margin-top: 20px !important;
+  }
+  #party-content {
+    font-size: 0.9rem !important;
   }
 
   .dim-card {

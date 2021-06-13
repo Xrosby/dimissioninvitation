@@ -24,11 +24,13 @@ export default function PartyComponent() {
       >
         <h4>Kære gæst</h4>
         <p
+          id="party-content"
           style={{
+            fontSize: "1rem",
             marginTop: "4%",
           }}
         >
-          Så blev det endelig tid for os at dimitere! I denne anledning
+          Så blev det endelig tid for os at dimitere!<b></b> I denne anledning
           inviteres du hermed til vores dimissionsfest i haven på{" "}
           <a
             style={{ color: "#6d893b", fontWeight: "bold" }}
