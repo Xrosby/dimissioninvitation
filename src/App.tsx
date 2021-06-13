@@ -43,7 +43,7 @@ function App() {
   let covidCardColor = "#b9ccc1";
   let parkingCardColor = "#f5f3de";
 
-  const colOptions = "col-lg-6 col-xl-6 col-md-12 col-sm-12";
+  const colOptions = "col-lg-6 col-xl-6 col-md-12 col-sm-12 dim-card";
   const minHeight = "472px";
   return (
     <div className="main-page">
@@ -53,6 +53,7 @@ function App() {
             minHeight: minHeight,
             backgroundColor: partyCardColor,
             margin: "0px",
+            padding: "0px",
             color: "black",
           }}
           className={colOptions}
@@ -110,12 +111,5 @@ function App() {
     </div>
   );
 }
-
-/**
- * 
-    parkingSpots.map((spot) => (
-    <ParkingSpot lat={spot.lat} lng={spot.lng} />
-  ));
- */
 
 export default App;

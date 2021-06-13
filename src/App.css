@@ -4,23 +4,27 @@
 
 @media only screen and (max-width: 768px) {
   .party-card {
-    background:none !important;
-   }
-   .covid-card {
-    background-color: #f5f3de  !important;
-   }
-   #parking-card {
-    background-color: #b9ccc1  !important;
-   }
-   .covid-text {
-     color:black !important;
-   }
-   #sanitizer-card {
-     padding:5% !important;
-   }
+    background-size: 115% !important;
+  }
+
+  .dim-card {
+    border-bottom: 1px solid green;
+    padding: 0px !important;
+  }
+
+  .covid-card {
+    background-color: #f5f3de !important;
+  }
+  #parking-card {
+    background-color: #b9ccc1 !important;
+  }
+  .covid-text {
+    color: black !important;
+  }
+  #sanitizer-card {
+    padding: 5% !important;
+  }
 }
-
-
 
 .party-card {
   background-repeat: no-repeat !important;
