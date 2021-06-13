@@ -6,9 +6,11 @@ import PartyComponent from "./components/PartyComponent";
 import CovidInformation from "./components/CovidInformation";
 import Plan from "./components/Plan";
 import "bootstrap/dist/css/bootstrap.min.css";
+import React from "react";
 function App() {
   interface OMarker {
     position: { lat: number; lng: number };
+    linkId: string;
   }
 
   const markers: Array<OMarker> = [
@@ -17,25 +19,32 @@ function App() {
         lat: 55.40161,
         lng: 10.395199,
       },
+      linkId: "link-1",
     },
     {
       position: {
         lat: 55.40096930304905,
         lng: 10.396582131568525,
       },
+      linkId: "link-2",
     },
     {
       position: {
         lat: 55.40197146648503,
         lng: 10.392858034968008,
       },
+      linkId: "link-3",
     },
   ];
 
   //55.40197146648503, 10.392858034968008
 
-  let onMarkerRightClick = function (marker: OMarker): void {
-    console.log("CLick");
+  let onMarkerClick = function (
+    e: google.maps.MapMouseEvent,
+    linkId: string
+  ): void {
+    let link = document.getElementById(linkId);
+    link?.click();
   };
 
   let partyCardColor = "#f5f3de";
@@ -103,10 +112,16 @@ function App() {
           </h1>{" "}
           <ParkingSpot
             key="spot"
-            onMarkerRightClick={onMarkerRightClick}
+            markerClick={onMarkerClick}
             markers={markers}
           />
         </div>
+      </div>
+      <div style={{ display: "none" }}>
+        <a id="link-1" href="https://goo.gl/maps/eH7caAntbbokPQbe8"></a>
+        <a id="link-2" href="https://goo.gl/maps/stqPtYxeULPbLSJT7"></a>
+        <a id="link-3" href="https://goo.gl/maps/cuhyHs8wRgpkHV1J6"></a>
+        <a id="link-4" href="https://goo.gl/maps/EL35JW7UzUMopPmy8"></a>
       </div>
     </div>
   );

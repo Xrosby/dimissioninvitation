@@ -2,13 +2,13 @@ import React from "react";
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 import { create } from "domain";
 
-
 interface OMarker {
   position: { lat: number; lng: number };
+  linkId: string;
 }
 interface Props {
   markers: Array<OMarker>;
-  onMarkerRightClick: (marker: OMarker) => void;
+  markerClick: (e: google.maps.MapMouseEvent, link: string) => void;
 }
 
 interface ContainerStyle {
@@ -28,6 +28,14 @@ export default function ParkingSpot(Props: Props) {
     mapIds: ["2bcc3a8ad9f310fd"],
   });
 
+  let onMarkerClick = function (
+    e: google.maps.MapMouseEvent,
+    linkId: string
+  ): void {
+    let link = document.getElementById(linkId);
+    link?.click();
+  };
+
   const [map, setMap] = React.useState(null);
 
   return isLoaded ? (
@@ -45,18 +53,19 @@ export default function ParkingSpot(Props: Props) {
           url: "https://i.ibb.co/4thZrWQ/party-loc.png",
           scaledSize: new google.maps.Size(46, 46),
         }}
+        onClick={(e) => onMarkerClick(e, "link-4")}
         position={{ lat: 55.39963145877151, lng: 10.395390039185802 }}
       />
 
       {Props.markers.map((marker) => (
         <Marker
           key={"marker-" + marker.position.lat}
-          {...marker}
+          position={marker.position}
           icon={{
             url: "https://www.pngrepo.com/png/133735/180/parking-location.png",
             scaledSize: new google.maps.Size(40, 40),
           }}
-          onRightClick={() => Props.onMarkerRightClick(marker)}
+          onClick={(e) => Props.markerClick(e, marker.linkId)}
         />
       ))}
       <></>
