@@ -11,7 +11,7 @@ export default function CovidInformation() {
 
   const covidPoints: Array<Point> = [
     {
-      message: " Der vil være rigeligt håndsprit tilgængeligt for alle",
+      message: " Der vil være rigeligt håndsprit tilgængeligt for alle.",
     },
     { message: "Vaccine" },
     {
