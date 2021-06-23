@@ -5,6 +5,7 @@ import { create } from "domain";
 interface OMarker {
   position: { lat: number; lng: number };
   linkId: string;
+  link: string
 }
 interface Props {
   markers: Array<OMarker>;
@@ -18,7 +19,7 @@ interface ContainerStyle {
 
 const containerStyle: ContainerStyle = {
   width: "100%",
-  height: "80%",
+  height: "78%",
 };
 
 export default function ParkingSpot(Props: Props) {
@@ -53,7 +54,7 @@ export default function ParkingSpot(Props: Props) {
           url: "https://i.ibb.co/4thZrWQ/party-loc.png",
           scaledSize: new google.maps.Size(46, 46),
         }}
-        onClick={(e) => onMarkerClick(e, "link-4")}
+        onClick={(e) => onMarkerClick(e, "party-link")}
         position={{ lat: 55.39963145877151, lng: 10.395390039185802 }}
       />
 

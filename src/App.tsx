@@ -11,6 +11,7 @@ function App() {
   interface OMarker {
     position: { lat: number; lng: number };
     linkId: string;
+    link: string;
   }
 
   const markers: Array<OMarker> = [
@@ -20,6 +21,7 @@ function App() {
         lng: 10.395199,
       },
       linkId: "link-1",
+      link: "https://goo.gl/maps/eH7caAntbbokPQbe8"
     },
     {
       position: {
@@ -27,6 +29,7 @@ function App() {
         lng: 10.396582131568525,
       },
       linkId: "link-2",
+      link: "https://goo.gl/maps/stqPtYxeULPbLSJT7"
     },
     {
       position: {
@@ -34,11 +37,19 @@ function App() {
         lng: 10.392858034968008,
       },
       linkId: "link-3",
+      link: "https://goo.gl/maps/cuhyHs8wRgpkHV1J6"
+    },
+    {
+      position: {
+        lat: 55.39905817737084,
+        lng: 10.396142865680735,
+      },
+      linkId: "link-4",
+      link: "https://goo.gl/maps/v6UGaGzBLK5ycMHH9"
     },
   ];
 
-  //55.40197146648503, 10.392858034968008
-
+ // 55.39905817737084, 10.396142865680735
   let onMarkerClick = function (
     e: google.maps.MapMouseEvent,
     linkId: string
@@ -53,7 +64,7 @@ function App() {
   let parkingCardColor = "#f5f3de";
 
   const colOptions = "col-lg-6 col-xl-6 col-md-12 col-sm-12 dim-card";
-  const minHeight = "472px";
+  const minHeight = "468px";
   return (
     <div className="main-page">
       <div className="row">
@@ -110,6 +121,7 @@ function App() {
           >
             Parkeringsmuligheder
           </h1>{" "}
+          Husk at nogle af parkeringsstederne kræver betaling
           <ParkingSpot
             key="spot"
             markerClick={onMarkerClick}
@@ -118,13 +130,18 @@ function App() {
         </div>
       </div>
       <div style={{ display: "none" }}>
-        <a id="link-1" href="https://goo.gl/maps/eH7caAntbbokPQbe8"></a>
-        <a id="link-2" href="https://goo.gl/maps/stqPtYxeULPbLSJT7"></a>
-        <a id="link-3" href="https://goo.gl/maps/cuhyHs8wRgpkHV1J6"></a>
-        <a id="link-4" href="https://goo.gl/maps/EL35JW7UzUMopPmy8"></a>
+   
+        {markers.map(m => <a id={m.linkId} href={m.link}></a>)}
+    
+        <a id="party-link" href="https://goo.gl/maps/EL35JW7UzUMopPmy8"></a>
       </div>
     </div>
   );
 }
 
 export default App;
+
+
+//<a id="link-1" href="https://goo.gl/maps/eH7caAntbbokPQbe8"></a>
+//<a id="link-2" href="https://goo.gl/maps/stqPtYxeULPbLSJT7"></a>
+//<a id="link-3" href="https://goo.gl/maps/cuhyHs8wRgpkHV1J6"></a>
